@@ -2,12 +2,21 @@ parameters:
 - name: Dependencies
   type: object
   default:
-  - name: test
-    version: 1.0.0
-  - name: other
-    version: 1.5.0
-  - name: required
-    version: 2.4.0
+  - test
+  - other
+  - required
+
+#parameters:
+#- name: Dependencies
+#  type: object
+#  default:
+#  - name: test
+#    version: 1.0.0
+#  - name: other
+#    version: 1.5.0
+#  - name: required
+#    version: 2.4.0
 
 - ${{ each file in parameters.Dependencies }}:
-  - script: echo Getting $(file.name) - $(file.version)
+  - script: echo $(file)
+  #- script: echo Getting $(file.name) - $(file.version)
