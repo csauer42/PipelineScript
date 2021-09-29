@@ -11,4 +11,4 @@ with open(fname, 'r') as stream:
 for dep in deps['dependencies']:
     print('%-8s - %6s' % (dep['name'], dep['version']))
 
-print("##vso[task.setvariable variable=testvar]'test string")
+print("##vso[task.setvariable variable=testvar]'test string'")
