@@ -1,8 +1,9 @@
-parameters:
+variables:
 - name: 'Dependencies'
   type: string
   default: package-name
 
 steps:
-- ${{ each pkg in parameters.Dependencies }}:
-  - script: echo ${{ pkg }}
+- script: echo $(variables.Dependencies)
+#- ${{ each pkg in parameters.Dependencies }}:
+#  - script: echo ${{ pkg }}
