@@ -17,6 +17,7 @@ parameters:
 #  - name: required
 #    version: 2.4.0
 
+steps:
 - ${{ each file in parameters.Dependencies }}:
-  - script: echo $(file)
+  - script: echo ${{ file }}
   #- script: echo Getting $(file.name) - $(file.version)
