@@ -1,23 +1,11 @@
 parameters:
-- name: Dependencies
+- name: 'Dependencies'
   type: object
   default:
   - test
   - other
   - required
 
-#parameters:
-#- name: Dependencies
-#  type: object
-#  default:
-#  - name: test
-#    version: 1.0.0
-#  - name: other
-#    version: 1.5.0
-#  - name: required
-#    version: 2.4.0
-
 steps:
-- ${{ each file in parameters.Dependencies }}:
-  - script: echo ${{ file }}
-  #- script: echo Getting $(file.name) - $(file.version)
+- ${{ each pkg in parameters.Dependencies }}:
+  - script: echo ${{ pkg }}
