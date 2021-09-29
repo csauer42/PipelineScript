@@ -1,10 +1,2 @@
-#variables:
-#- name: 'Dependencies'
-#  type: string
-#  default: package-name
-
 steps:
-- script: echo OK
-#$(variables.Dependencies)
-#- ${{ each pkg in parameters.Dependencies }}:
-#  - script: echo ${{ pkg }}
+- script: echo 'OK again'
