@@ -4,7 +4,7 @@
 #  default: package-name
 
 steps:
-- script: echo OK 
+- script: echo OK
 #$(variables.Dependencies)
 #- ${{ each pkg in parameters.Dependencies }}:
 #  - script: echo ${{ pkg }}
