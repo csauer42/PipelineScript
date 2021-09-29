@@ -1,10 +1,7 @@
 parameters:
 - name: 'Dependencies'
   type: object
-  default:
-  - test
-  - other
-  - required
+  default: [ test, other, required ]
 
 steps:
 - ${{ each pkg in parameters.Dependencies }}:
