@@ -26,5 +26,7 @@ fname = os.path.join(parent, '.azure/download.yml')
 with open(fname, 'r') as stream:
     deps = yaml.safe_load(stream)
 
-for dep in deps['parameters'][0]['default']:
-    download(dep['pkg'], dep['version'], dldir)
+for param in deps['parameters']:
+    if param['name'] == 'dependencies':
+        for dep in param['default']:
+            download(dep['pkg'], dep['version'], dldir)
